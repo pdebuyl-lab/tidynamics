@@ -1,3 +1,4 @@
+from __future__ import division
 import numpy as np
 
 def autocorrelation_1d(data):
