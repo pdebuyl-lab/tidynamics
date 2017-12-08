@@ -12,7 +12,7 @@ def msd(pos):
     pos -= pos[0]
     N = len(pos)
     rsq = np.sum(pos**2, axis=1)
-    MSD = np.zeros(N)
+    MSD = np.zeros(N, dtype=float)
 
     SAB = autocorrelation_1d(pos[:,0])
     for i in range(1, pos.shape[1]):
