@@ -13,6 +13,5 @@ def acf(data):
     elif data.ndim>1:
         result = autocorrelation_1d(data[:,0])
         for j in range(1, data.shape[1]):
-            print(j)
             result += autocorrelation_1d(data[:,j])
         return result
