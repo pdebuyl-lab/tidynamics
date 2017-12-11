@@ -11,6 +11,9 @@ tidynamics depends only on `Python <https://www.python.org/>`_ and `NumPy
 
 tidynamics accepts as input NumPy arrays storing the positions and velocities of particles.
 
+tidynamics relies on the so-called Fast Correlation Algorithm proposed by Kneller and others
+for the `nMOLDYN <http://dirac.cnrs-orleans.fr/plone/software/nmoldyn/>`_ analysis program.
+
 The development of tidynamics is in early stages but it features several tests.
 
 :License: BSD 3-clause
