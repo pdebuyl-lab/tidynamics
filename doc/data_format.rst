@@ -7,8 +7,5 @@ the trajectory.
 
 Data is assumed to be sampled at equal time intervals.
 
-Position data
--------------
-
 For a 2D position dataset ``pos``, :math:`x(t)` is stored in ``pos[:,0]`` and :math:`y(t)`
 is stored in ``pos[:,1]``.
