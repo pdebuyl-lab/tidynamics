@@ -16,27 +16,21 @@ T = 0.1
 dt = 0.02
 v_factor = np.sqrt(2*T*gamma*dt)
 
-N = 3000
-mean = np.zeros(N)
-count = 0
-for i in range(32):
-    v = 0
-    for i in range(100):
-        v = v - gamma*v*dt + v_factor*np.random.normal()
-    v_data = []
-    for i in range(N):
-        v = v - gamma*v*dt + v_factor*np.random.normal()
-        v_data.append(v)
-    v_data = np.array(v_data)
-    mean += tidynamics.acf(v_data)
-    count += 1
+N = 32768
+v = 0
+for i in range(100):
+    v = v - gamma*v*dt + v_factor*np.random.normal()
+v_data = []
+for i in range(N):
+    v = v - gamma*v*dt + v_factor*np.random.normal()
+    v_data.append(v)
+v_data = np.array(v_data)
 
-mean /= count
-mean = mean[:N//4]
+acf = tidynamics.acf(v_data)[:N//64]
 
-time = np.arange(N//4)*dt
+time = np.arange(N//64)*dt
 
-plt.plot(time, mean, label='VACF (num.)')
+plt.plot(time, acf, label='VACF (num.)')
 
 plt.plot(time, T*np.exp(-gamma*time), label='VACF (theo.)')
 
