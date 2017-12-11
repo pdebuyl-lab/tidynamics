@@ -11,3 +11,9 @@ tidynamics depends only on `Python <https://www.python.org/>`_ and `NumPy
 
 tidynamics accepts as input NumPy arrays storing the positions and velocities of particles.
 
+The development of tidynamics is in early stages but it features several tests.
+
+**License:** BSD 3-clause  
+**Author:** Pierre de Buyl  
+**Website:** http://lab.pdebuyl.be/tidynamics/
+
