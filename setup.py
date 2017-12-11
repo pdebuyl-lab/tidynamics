@@ -17,7 +17,7 @@ setup(name="tidynamics",
       author="Pierre de Buyl",
       author_email="pdebuyl@pdebuyl.be",
       license="BSD",
-      url="https://github.com/pdebuyl/tidynamics",
+      url=" https://pypi.python.org/pypi/tidynamics",
       packages=["tidynamics"],
       classifiers=[
           'License :: OSI Approved :: BSD License',
