@@ -1,6 +1,6 @@
 from setuptools import setup
 
-VERSION = '0.1.0-dev1'
+VERSION = '0.1.0-dev2'
 
 with open('README.rst', 'r') as f:
     readme = f.read()
