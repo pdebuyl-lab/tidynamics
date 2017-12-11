@@ -1,3 +1,13 @@
+"""
+================================
+Mean-squared displacements (MSD)
+================================
+
+Generate a number of random walks and compute their MSD.
+
+Compute also the MSD for a constant velocity motion.
+"""
+
 import numpy as np
 import tidynamics
 import matplotlib.pyplot as plt

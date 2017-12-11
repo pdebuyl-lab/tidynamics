@@ -1,3 +1,12 @@
+"""
+========================
+Autocorrelation function
+========================
+
+Generate the velocity for a Ornstein-Uhlenbeck process and compute its autocorrelation
+function.
+"""
+
 import numpy as np
 import tidynamics
 import matplotlib.pyplot as plt
