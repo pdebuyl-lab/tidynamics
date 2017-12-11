@@ -1,5 +1,3 @@
 
-from ._msd import msd
-from ._acf import acf
+from .correlation import acf, msd
 from .version import __version__ as __version__
-
