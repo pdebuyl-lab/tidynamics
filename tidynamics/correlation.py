@@ -3,9 +3,17 @@ import numpy as np
 from .core import autocorrelation_1d
 
 def acf(data):
-    """
-    Compute the autocorrelation of the data using the Fast Correlation
-    Algorithm.
+    """Autocorrelation of the input data using the Fast Correlation Algorithm.
+
+    For D-dimensional time series, a sum is performed on the last dimension.
+
+    Args:
+        data (array-like): The input signal, of shape (N,) or (N,D).
+
+    Returns:
+        ndarray of shape (N,) with the autocorrelation for successive linearly
+        spaced time delays
+
     """
 
     data = np.asarray(data)
@@ -18,9 +26,16 @@ def acf(data):
         return result
 
 def msd(pos):
-    """
-    Compute the mean-squared displacement for a single particles using the
-    Fast Correlation Algorithm.
+    """Mean-squared displacement (MSD) for single trajectories using the Fast
+    Correlation Algorithm.
+
+    Args:
+        data (array-like): The input trajectory, of shape (N,D).
+
+    Returns:
+        ndarray of shape (N,) with the MSD for successive linearly spaced time
+        delays
+
     """
 
     pos = np.array(pos, copy=True)
