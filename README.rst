@@ -39,7 +39,7 @@ Tidynamics can be installed with pip::
 It is also possible to download the source code and execute the setup.py file.
 
 I ran the tests with Python 2.7, 3.5 and 3.6 and NumPy 1.11 and 1.13. If you encounter any
-issue, let me know (<.
+issue, let me know (see :ref:`Contact` below).
 
 Testing
 -------
