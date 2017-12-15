@@ -19,9 +19,40 @@ For a quick jump into tidynamics, have a look at the examples.
 
 The development of tidynamics is in early stages but it features several tests.
 
-Goals:
+Goals and plans:
 
 - Minimal dependencies.
 - Serve as a reference implementation for common algorithms that are useful for molecular
   and stochastic simulations.
+- Provide later a bit more flexibility to handle cross correlations and many-body systems.
 
+
+Installation
+------------
+
+It is necessary to have Python and NumPy to install and use tidynamics.
+
+Tidynamics can be installed with pip::
+
+    pip install --user tidynamics
+
+It is also possible to download the source code and execute the setup.py file.
+
+I ran the tests with Python 2.7, 3.5 and 3.6 and NumPy 1.11 and 1.13. If you encounter any
+issue, let me know (<.
+
+Testing
+-------
+
+After a successfull installation, run::
+
+    (cd tests ; python -m pytest)
+
+.. _contact:
+
+Contact
+-------
+
+To contact the author about tidynamics, you can either write an email to `Pierre de Buyl
+<https://www.kuleuven.be/wieiswie/nl/person/00092351>`_ or use the `issue tracker
+<https://github.com/pdebuyl-lab/tidynamics/issues>`_ of the GitHub project.
