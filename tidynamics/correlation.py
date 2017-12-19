@@ -39,6 +39,8 @@ def msd(pos):
     """
 
     pos = np.array(pos, copy=True, dtype=float)
+    if pos.ndim==1:
+        pos = pos.reshape((-1,1))
     N = len(pos)
     rsq = np.sum(pos**2, axis=1)
     MSD = np.zeros(N, dtype=float)
