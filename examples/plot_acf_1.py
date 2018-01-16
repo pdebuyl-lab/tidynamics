@@ -19,12 +19,19 @@ v_factor = np.sqrt(2*T*gamma*dt)
 N = 32768
 v = 0
 for i in range(100):
-    v = v - gamma*v*dt + v_factor*np.random.normal()
+    noise_force = v_factor*np.random.normal()
+    v = v - gamma*v*dt + noise_force
+
 v_data = []
+noise_data = []
+
 for i in range(N):
-    v = v - gamma*v*dt + v_factor*np.random.normal()
+    noise_force = v_factor*np.random.normal()
+    v = v - gamma*v*dt + noise_force
     v_data.append(v)
+    noise_data.append(noise_force)
 v_data = np.array(v_data)
+noise_data = np.array(noise_data)/np.sqrt(dt)
 
 acf = tidynamics.acf(v_data)[:N//64]
 
@@ -35,5 +42,25 @@ plt.plot(time, acf, label='VACF (num.)')
 plt.plot(time, T*np.exp(-gamma*time), label='VACF (theo.)')
 
 plt.legend()
-plt.title('Examples for the VACF')
+plt.title('Velocity autocorrelation')
+plt.xlabel(r'$\tau$')
+plt.ylabel(r'$\langle v(t) v(t+\tau) \rangle$')
+
+plt.figure()
+
+time = np.arange(N)*dt
+twotimes = np.concatenate((-time[1:][::-1], time))
+
+plt.plot(twotimes, tidynamics.core.correlation_1d(noise_data, v_data), label='num.')
+plt.plot(time, 2*T/gamma*np.exp(-gamma*time), label='theo.')
+
+plt.xlim(-5/gamma, 5/gamma)
+
+plt.ylim(-2*T/gamma/10, 1.1*2*T/gamma)
+
+plt.legend()
+plt.title('Force-velocity correlation')
+plt.xlabel(r'$\tau$')
+plt.ylabel(r'$\langle F(t) v(t+\tau) \rangle$')
+
 plt.show()
