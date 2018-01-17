@@ -1,6 +1,7 @@
 from __future__ import division
 import numpy as np
 from .core import autocorrelation_1d
+import itertools
 
 def acf(data):
     """Autocorrelation of the input data using the Fast Correlation Algorithm.
@@ -59,3 +60,35 @@ def msd(pos):
         MSD[m] = SUMSQ/(N-m) - 2*SAB[m]
 
     return MSD
+
+def cross_displacement(x):
+    """Cross displacement of the components of x.
+
+    Args:
+        x (array-like): The input trajectory, of shape (N, D).
+
+    Returns:
+        ndarray of shape (D, D, N) with the time-dependent "(Delta x[:,i]) (Delta x[:,j])".
+    """
+
+    x = np.array(x)
+    if x.ndim != 2:
+        raise ValueError("Incorrect input data for cross_displacement")
+    D = x.shape[1]
+
+    # Precompute the component-wise MSD
+    split_msd = [msd(xi) for xi in x.T]
+
+    # Create list of lists for the output
+    result = [[] for i in range(D)]
+    for i, j in itertools.product(range(D), range(D)):
+        result[i].append([])
+
+    for i, j in itertools.product(range(D), range(D)):
+        if i==j:
+            result[i][j] = split_msd[i]
+        else:
+            sum_of_x = msd(x[:,i]+x[:,j])
+            result[i][j] = 0.5*(sum_of_x - split_msd[i] - split_msd[j])
+
+    return result
