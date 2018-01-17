@@ -44,7 +44,7 @@ issue, let me know (see :ref:`Contact` below).
 Testing
 -------
 
-We use `pytest <https://pypi.python.org/pypi/pytest/>`_ for testing.
+We use `pytest <https://pypi.python.org/pypi/pytest/>`_ for testing::
 
     python -m pytest
 
