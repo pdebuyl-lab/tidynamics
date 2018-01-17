@@ -44,9 +44,9 @@ issue, let me know (see :ref:`Contact` below).
 Testing
 -------
 
-After a successfull installation, run::
+We use `pytest <https://pypi.python.org/pypi/pytest/>`_ for testing.
 
-    (cd tests ; python -m pytest)
+    python -m pytest
 
 .. _contact:
 

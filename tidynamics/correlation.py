@@ -31,11 +31,11 @@ def msd(pos):
     Correlation Algorithm.
 
     Args:
-        data (array-like): The input trajectory, of shape (N,D).
+        pos (array-like): The input trajectory, of shape (N,D).
 
     Returns:
-        ndarray of shape (N,) with the MSD for successive linearly spaced time
-        delays
+        : ndarray of shape (N,) with the MSD for successive linearly spaced time
+        delays.
 
     """
 
@@ -68,7 +68,9 @@ def cross_displacement(x):
         x (array-like): The input trajectory, of shape (N, D).
 
     Returns:
-        ndarray of shape (D, D, N) with the time-dependent "(Delta x[:,i]) (Delta x[:,j])".
+        : list of lists of times series, where the fist two indices [i][j]
+        denote the coordinates for the cross displacement: "(Delta x[:,i]) (Delta x[:,j])".
+
     """
 
     x = np.array(x)

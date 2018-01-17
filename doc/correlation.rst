@@ -7,3 +7,5 @@ Correlation routines
 .. autofunction:: acf
 
 .. autofunction:: msd
+
+.. autofunction:: cross_displacement
