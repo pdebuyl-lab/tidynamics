@@ -55,9 +55,8 @@ def msd(pos):
     m = 0
     MSD[m] = SUMSQ - 2*SAB[m]*N
 
-    for m in range(1, N):
-        SUMSQ = SUMSQ - rsq[m-1] - rsq[N-m]
-        MSD[m] = SUMSQ/(N-m) - 2*SAB[m]
+    MSD[1:] = (SUMSQ - np.cumsum(rsq)[:-1] - np.cumsum(rsq[1:][::-1])) / (N-1-np.arange(N-1))
+    MSD[1:] -= 2*SAB[1:]
 
     return MSD
 
