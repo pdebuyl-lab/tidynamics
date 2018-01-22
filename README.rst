@@ -1,6 +1,10 @@
 tidynamics
 ==========
 
+.. image:: https://travis-ci.org/pdebuyl-lab/tidynamics.svg?branch=master
+    :target: https://travis-ci.org/pdebuyl-lab/tidynamics
+    :alt: Test Status
+
 A tiny package to compute the dynamics of stochastic and molecular simulations.
 
 :License: BSD 3-clause
