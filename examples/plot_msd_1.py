@@ -1,4 +1,4 @@
-"""
+r"""
 ================================
 Mean-squared displacements (MSD)
 ================================
@@ -6,6 +6,16 @@ Mean-squared displacements (MSD)
 Generate a number of random walks and compute their MSD.
 
 Compute also the MSD for a constant velocity motion.
+
+For a random walk, the MSD is linear: :math:`MSD(\tau) \approx 2 D \tau`
+
+For a constant velocity motion, the MSD is quadratic: :math:`MSD(\tau) = v \tau^2`
+
+We show in the figures the numerical result computed by `tidynamics.msd`
+('num.') and the theoretical value ('theo.').
+
+For the constant velocity case, we also display a "pedestrian approach" where
+the loop for averaging the MSD is performed explicitly.
 """
 
 import numpy as np
@@ -43,7 +53,7 @@ for i in range(10):
     for j in range(N//10):
         pedestrian_msd[j] += (time[10*i]-time[10*i+j])**2
 pedestrian_msd /= 10
-plt.plot(time[1:N//10], pedestrian_msd[1:], ls='--', label="pedestr")
+plt.plot(time[1:N//10], pedestrian_msd[1:], ls='--', label="pedestrian")
 
 plt.loglog()
 plt.legend()
