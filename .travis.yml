@@ -6,8 +6,14 @@ python:
  - 3.6
 
 env:
+  - NUMPY_VERSION=1.11.0
   - NUMPY_VERSION=1.12.1
   - NUMPY_VERSION=1.14.0
+
+matrix:
+  exclude:
+    - python: 3.6
+      env: NUMPY_VERSION=1.11.0
 
 script:
   - virtualenv --python=python venv
