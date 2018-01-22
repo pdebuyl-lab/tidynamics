@@ -1,0 +1,25 @@
+language: python
+
+matrix:
+  - python: 2.7
+    env: NUMPY_VERSION=1.12.1
+  - python: 2.7
+    env: NUMPY_VERSION=1.14.0
+  - python: 3.5
+    env: NUMPY_VERSION=1.12.1
+  - python: 3.5
+    env: NUMPY_VERSION=1.14.0
+  - python: 3.6
+    env: NUMPY_VERSION=1.12.1
+  - python: 3.6
+    env: NUMPY_VERSION=1.14.0
+
+script:
+  - virtualenv --python=python venv
+  - source venv/bin/activate
+  - python -m pip install -U pip
+  - pip install -U wheel
+  - pip install numpy=${NUMPY_VERSION}
+  - pip install pytest
+  - python -m pytest
+
