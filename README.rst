@@ -21,8 +21,6 @@ tidynamics
 
 For a quick jump into tidynamics, have a look at the examples.
 
-The development of tidynamics is in early stages but it features several tests.
-
 Goals and plans:
 
 - Minimal dependencies.
