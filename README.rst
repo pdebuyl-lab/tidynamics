@@ -36,7 +36,7 @@ Installation
 
 It is necessary to have Python and NumPy to install and use tidynamics.
 
-Tidynamics can be installed with pip::
+tidynamics can be installed with pip::
 
     pip install --user tidynamics
 
