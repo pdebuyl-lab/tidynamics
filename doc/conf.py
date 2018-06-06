@@ -35,6 +35,7 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.mathjax',
     'sphinx_gallery.gen_gallery',
+    'sphinxcontrib.bibtex',
     ]
 
 sphinx_gallery_conf = {

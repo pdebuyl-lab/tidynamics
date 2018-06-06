@@ -9,6 +9,8 @@
 
    index
    correlation
+   algorithms
    data_format
    auto_examples/index
+   zbibliography
 
