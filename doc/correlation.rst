@@ -9,3 +9,5 @@ Correlation routines
 .. autofunction:: msd
 
 .. autofunction:: cross_displacement
+
+.. autofunction:: correlation_1d

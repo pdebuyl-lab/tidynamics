@@ -51,7 +51,7 @@ plt.figure()
 time = np.arange(N)*dt
 twotimes = np.concatenate((-time[1:][::-1], time))
 
-plt.plot(twotimes, tidynamics.core.correlation_1d(noise_data, v_data), label='num.')
+plt.plot(twotimes, tidynamics.correlation_1d(noise_data, v_data), label='num.')
 plt.plot(time, 2*T/gamma*np.exp(-gamma*time), label='theo.')
 
 plt.xlim(-5/gamma, 5/gamma)

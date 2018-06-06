@@ -19,6 +19,15 @@ def autocorrelation_1d(data):
 def correlation_1d(data1, data2):
     """
     Compute the correlation of two scalar time series.
+
+    Args:
+        data1 (array-like): Input time series of shape (N,)
+        data2 (array-like): Input time series of shape (N,)
+
+    Returns:
+        : ndarray of shape (2*N-1,) with the correlation for
+        "data1*data2[tau]" where tau is the lag in units of the timestep in the
+        input data. The correlation is given from time -N to time N.
     """
 
     N = len(data1)
