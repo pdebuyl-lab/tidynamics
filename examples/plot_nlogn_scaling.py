@@ -14,6 +14,9 @@ import tidynamics
 import matplotlib.pyplot as plt
 import time
 
+plt.rcParams['figure.figsize'] = 5.12, 3.84
+plt.rcParams['figure.subplot.bottom'] = 0.15
+
 all_N = 64*2**np.arange(14)
 max_direct_N = 32768
 all_time = []

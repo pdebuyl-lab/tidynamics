@@ -14,6 +14,8 @@ import numpy as np
 import tidynamics
 import matplotlib.pyplot as plt
 
+plt.rcParams['figure.figsize'] = 5.12, 3.84
+
 gamma = 2.7
 T = 0.1
 dt = 0.02

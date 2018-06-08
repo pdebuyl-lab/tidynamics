@@ -22,6 +22,8 @@ import numpy as np
 import tidynamics
 import matplotlib.pyplot as plt
 
+plt.rcParams['figure.figsize'] = 5.12, 3.84
+
 N = 1000
 mean = np.zeros(N)
 count = 0
