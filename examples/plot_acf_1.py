@@ -3,8 +3,11 @@
 Autocorrelation function
 ========================
 
-Generate the velocity for a Ornstein-Uhlenbeck process and compute its autocorrelation
-function.
+Generate the velocity for a Ornstein-Uhlenbeck process and compute its
+autocorrelation function.
+
+We also display the force velocity correlation as an example of using the
+routine `correlation_1d`.
 """
 
 import numpy as np
