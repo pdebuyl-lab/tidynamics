@@ -3,6 +3,7 @@ Correlation routines
 
 .. automodule:: tidynamics
    :members:
+   :noindex:
 
 .. autofunction:: acf
 
