@@ -11,4 +11,4 @@ Correlation routines
 
 .. autofunction:: cross_displacement
 
-.. autofunction:: correlation_1d
+.. autofunction:: correlation

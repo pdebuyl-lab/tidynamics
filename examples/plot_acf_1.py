@@ -7,7 +7,7 @@ Generate the velocity for a Ornstein-Uhlenbeck process and compute its
 autocorrelation function.
 
 We also display the force velocity correlation as an example of using the
-routine `correlation_1d`.
+routine `correlation`.
 """
 
 import numpy as np
@@ -56,7 +56,7 @@ plt.figure()
 time = np.arange(N)*dt
 twotimes = np.concatenate((-time[1:][::-1], time))
 
-plt.plot(twotimes, tidynamics.correlation_1d(noise_data, v_data), label='num.')
+plt.plot(twotimes, tidynamics.correlation(noise_data, v_data), label='num.')
 plt.plot(time, 2*T/gamma*np.exp(-gamma*time), label='theo.')
 
 plt.xlim(-5/gamma, 5/gamma)

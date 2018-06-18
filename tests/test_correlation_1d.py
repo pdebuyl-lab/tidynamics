@@ -5,7 +5,7 @@ def test_correlation_acf_1():
     N = 100
     data = np.random.random(size=N)
     acf = tidynamics.acf(data)
-    comparison = tidynamics.correlation_1d(data, data)
+    comparison = tidynamics.core.correlation_1d(data, data)
     assert np.allclose(acf, comparison[-N:])
 
 def test_cst_correlation_acf():
@@ -14,6 +14,6 @@ def test_cst_correlation_acf():
     data1 = np.ones(N)
     data2 = x*np.ones(N)
     reference_cf = x*np.ones(2*N-1)
-    computed_cf = tidynamics.correlation_1d(data1, data2)
+    computed_cf = tidynamics.core.correlation_1d(data1, data2)
     assert np.allclose(reference_cf, computed_cf)
     

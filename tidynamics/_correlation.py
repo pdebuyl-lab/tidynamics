@@ -1,6 +1,6 @@
 from __future__ import division
 import numpy as np
-from .core import autocorrelation_1d
+from .core import autocorrelation_1d, correlation_1d
 import itertools
 
 def acf(data):
@@ -93,3 +93,33 @@ def cross_displacement(x):
             result[i][j] = 0.5*(sum_of_x - split_msd[i] - split_msd[j])
 
     return result
+
+def correlation(data1, data2):
+    """Correlation of the input data using the Fast Correlation Algorithm.
+
+    For D-dimensional time series, a sum is performed on the last dimension.
+
+    Args:
+        data1 (array-like): The first input signal, of shape (N,) or (N,D).
+
+        data2 (array-like): The first input signal, of equal shape as data1.
+
+    Returns:
+        : ndarray of shape (2*N-1,) with the correlation for
+        "data1*data2[tau]" where tau is the lag in units of the timestep in the
+        input data. The correlation is given from time -N to time N.
+
+    """
+
+    data1 = np.asarray(data1)
+    data2 = np.asarray(data2)
+    if data1.shape != data2.shape:
+        raise ValueError('Incompatible shapes for data1 and data2')
+
+    if data1.ndim==1:
+        return correlation_1d(data1, data2)
+    elif data1.ndim>1:
+        result = correlation_1d(data1[:,0], data2[:,0])
+        for j in range(1, data1.shape[1]):
+            result += correlation_1d(data1[:,j], data2[:,j])
+        return result
