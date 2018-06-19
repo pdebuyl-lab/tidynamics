@@ -20,6 +20,7 @@ setup(name="tidynamics",
       license="BSD",
       url=" https://pypi.python.org/pypi/tidynamics",
       packages=["tidynamics"],
+      install_requires=['numpy'],
       classifiers=[
           'License :: OSI Approved :: BSD License',
           'Programming Language :: Python :: 2.7',
