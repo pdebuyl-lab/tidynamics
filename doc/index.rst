@@ -28,8 +28,9 @@ tidynamics
 
 - performs the computation of mean-square displacements and correlation functions.
 - accepts as input NumPy arrays storing the positions and velocities of particles.
-- implements the so-called Fast Correlation Algorithm proposed by Kneller and others for the
-  `nMOLDYN <http://dirac.cnrs-orleans.fr/plone/software/nmoldyn/>`_ analysis program.
+- implements the so-called Fast Correlation Algorithm proposed by Kneller and others
+  :cite:`nmoldyn_1995` for the `nMOLDYN
+  <http://dirac.cnrs-orleans.fr/plone/software/nmoldyn/>`_ analysis program.
 - depends only `Python <https://www.python.org/>`_ and `NumPy <http://www.numpy.org/>`_.
 
 For a quick jump into tidynamics, have a look at the examples.
