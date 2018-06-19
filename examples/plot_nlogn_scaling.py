@@ -41,8 +41,11 @@ for N in all_N:
         direct_time.append(direct_t/n_runs)
 
 plt.plot(all_N, all_time, label='actual compute time')
-plt.plot(all_N, all_time[-1] * all_N*np.log(all_N) / (all_N[-1]*np.log(all_N[-1])), label=r'$N\log N$ scaling')
-plt.plot(all_N[:len(direct_time)], direct_time, label='np.correlate compute time', ls='--')
+plt.plot(all_N,
+         all_time[-1] * all_N*np.log(all_N) / (all_N[-1]*np.log(all_N[-1])),
+         label=r'$N\log N$ scaling')
+plt.plot(all_N[:len(direct_time)], direct_time,
+         label='np.correlate compute time', ls='--')
 
 plt.xlabel(r'$N$')
 plt.ylabel('time')

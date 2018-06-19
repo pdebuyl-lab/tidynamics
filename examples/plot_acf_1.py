@@ -16,6 +16,8 @@ import matplotlib.pyplot as plt
 
 plt.rcParams['figure.figsize'] = 5.12, 3.84
 
+# Generate data for a Ornstein-Uhlenbeck process
+
 gamma = 2.7
 T = 0.1
 dt = 0.02
@@ -38,6 +40,8 @@ for i in range(N):
 v_data = np.array(v_data)
 noise_data = np.array(noise_data)/np.sqrt(dt)
 
+# Compute the autocorrelation function and plot the result
+
 acf = tidynamics.acf(v_data)[:N//64]
 
 time = np.arange(N//64)*dt
@@ -51,12 +55,15 @@ plt.title('Velocity autocorrelation')
 plt.xlabel(r'$\tau$')
 plt.ylabel(r'$\langle v(t) v(t+\tau) \rangle$')
 
+# Compute the force velocity correlation and plot the result
+
 plt.figure()
 
 time = np.arange(N)*dt
 twotimes = np.concatenate((-time[1:][::-1], time))
 
-plt.plot(twotimes, tidynamics.correlation(noise_data, v_data), label='num.')
+plt.plot(twotimes, tidynamics.correlation(noise_data, v_data),
+         label='num.')
 plt.plot(time, 2*T/gamma*np.exp(-gamma*time), label='theo.')
 
 plt.xlim(-5/gamma, 5/gamma)
