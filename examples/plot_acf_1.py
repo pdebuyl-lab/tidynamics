@@ -1,7 +1,7 @@
 """
-========================
-Autocorrelation function
-========================
+=====================
+Correlation functions
+=====================
 
 Generate the velocity for a Ornstein-Uhlenbeck process and compute its
 autocorrelation function.
