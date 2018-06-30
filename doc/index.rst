@@ -75,3 +75,5 @@ To contact the author about tidynamics, you can either write an email to `Pierre
 
 Bug reports are welcome. If you consider proposing a feature, please keep in mind the goals
 and plans exposed above.
+
+Contributors are listed in :ref:`contributors`.

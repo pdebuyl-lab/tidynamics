@@ -12,5 +12,6 @@
    algorithms
    data_format
    auto_examples/index
+   contributors
    zbibliography
 
