@@ -47,8 +47,6 @@ We use `pytest <https://pypi.python.org/pypi/pytest/>`_ for testing::
 
     python -m pytest
 
-.. _contact:
-
 Contact, support, and contribution information
 ----------------------------------------------
 
