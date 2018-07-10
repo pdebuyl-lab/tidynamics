@@ -57,6 +57,11 @@ plt.plot(all_N,
 plt.plot(all_N[:len(direct_time)], direct_time,
          label='np.correlate compute time', ls='--')
 
+data_len = len(direct_time)
+plt.plot(all_N[:data_len],
+         all_N[:data_len]**2 * direct_time[data_len-1] / all_N[data_len-1]**2,
+         label=r'$N^2$ scaling', ls=':')
+
 plt.xlabel(r'$N$')
 plt.ylabel('time')
 
