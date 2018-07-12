@@ -24,6 +24,11 @@ The autocorrelation, the correlation between two time-series, the mean-square di
 and the cross-displacement (for off-diagonal realisations of Brownian motion), allow the
 quantitative measure of relaxation and transport coefficients from numerical trajectories.
 
+There is a lack of a self-contained implementation of the algorithm. The software nMoldyn
+[@hinsen_nmoldyn3_2012] implements it within a larger library but it has a more complex
+interface and more dependencies. The goal of tidynamics is to serve as a reference
+implementation with a lighter interface.
+
 tidynamics is designed as a library in which every routine operates directly on NumPy arrays
 and returns NumPy arrays. The interface is simple and enables convenient use in interactive
 sessions or in teaching material. We test the library against Python 2.7, 3.5 and 3.6 and
@@ -55,9 +60,19 @@ the plain correlation algorithm.
 The benefits of using tidynamics originate in the implementation of the suitable definitions
 for the study of dynamical systems, in a good performance, and in its ease of installation.
 
+# Examples
+
+We show in figures 1 and 2 typical usecases that are provided as examples in the
+documentation of tidynamics.
+
+![Example computation of the mean-square displacement for a random walk and for a trajectory
+at constant velocity.](msd_example.pdf)
+
+![Example computation of the velocity autocorrelation function for a Ornstein-Uhlenbeck
+process [@gardiner_2004].](vacf_example.pdf)
 
 # Acknowledgements
 
-Pierre de Buyl is a postdoctoral fellow of the Research Foundation Flanders - FWO.
+PdB is a postdoctoral fellow of the Research Foundation Flanders - FWO.
 
 # References
