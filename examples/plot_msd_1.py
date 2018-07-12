@@ -24,6 +24,8 @@ import tidynamics
 import matplotlib.pyplot as plt
 
 plt.rcParams['figure.figsize'] = 5.12, 3.84
+plt.rcParams['figure.subplot.bottom'] = 0.18
+plt.rcParams['figure.subplot.left'] = 0.16
 
 # Generate 32 random walks and compute their mean-square
 # displacements
@@ -74,5 +76,7 @@ plt.plot(time[1:N//10], pedestrian_msd[1:], ls='--',
 
 plt.loglog()
 plt.legend()
+plt.xlabel('time')
+plt.ylabel('mean square displacement')
 plt.title('Examples for the mean-squared displacement')
 plt.show()
