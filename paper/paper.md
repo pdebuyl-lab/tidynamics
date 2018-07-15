@@ -62,17 +62,19 @@ for the study of dynamical systems, in a good performance, and in its ease of in
 
 # Examples
 
-We show in figures 1 and 2 typical usecases that are provided as examples in the
-documentation of tidynamics.
+We show in figures 1, 2, and 3 the examples provided with tidynamics. The examples in the
+repository include short codes for a random walk and for the Ornstein-Uhlenbeck process.
 
-![Example computation of the mean-square displacement for a random walk and for a trajectory
-at constant velocity.](msd_example.pdf)
+![Mean-square displacement for a random walk and for a trajectory at constant velocity.](msd_example.pdf)
 
-![Example computation of the velocity autocorrelation function for a Ornstein-Uhlenbeck
-process [@gardiner_2004].](vacf_example.pdf)
+![Velocity autocorrelation function for a Ornstein-Uhlenbeck process [@gardiner_2004].](vacf_example.pdf)
+
+![Scaling of the CPU time with respect to the length of the data.](scaling.pdf)
 
 # Acknowledgements
 
 PdB is a postdoctoral fellow of the Research Foundation Flanders - FWO.
+PdB would like to acknowledge useful discussions with Konrad Hinsen and feedback about the
+library from Max Linke.
 
 # References
