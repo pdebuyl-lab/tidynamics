@@ -1,7 +1,7 @@
 r"""
-================================
-Mean-squared displacements (MSD)
-================================
+===============================
+Mean-square displacements (MSD)
+===============================
 
 Generate a number of random walks and compute their MSD.
 
@@ -78,5 +78,5 @@ plt.loglog()
 plt.legend()
 plt.xlabel('time')
 plt.ylabel('mean square displacement')
-plt.title('Examples for the mean-squared displacement')
+plt.title('Examples for the mean-square displacement')
 plt.show()
