@@ -16,7 +16,8 @@ import matplotlib.pyplot as plt
 import time
 
 plt.rcParams['figure.figsize'] = 5.12, 3.84
-plt.rcParams['figure.subplot.bottom'] = 0.15
+plt.rcParams['figure.subplot.bottom'] = 0.18
+plt.rcParams['figure.subplot.left'] = 0.16
 
 
 all_N = []
