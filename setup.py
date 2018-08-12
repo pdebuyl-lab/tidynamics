@@ -10,16 +10,16 @@ with open('tidynamics/version.py', 'w') as version_f:
         "__version__ = '{__version__}'".format(__version__=VERSION)
     )
 
-setup(name="tidynamics",
+setup(name='tidynamics',
       version=VERSION,
-      description="Tiny package to compute dynamics correlations",
+      description='Tiny package to compute dynamics correlations',
       long_description=readme,
-      long_description_content_type="text/x-rst",
-      author="Pierre de Buyl",
-      author_email="pdebuyl@pdebuyl.be",
-      license="BSD",
-      url=" https://pypi.python.org/pypi/tidynamics",
-      packages=["tidynamics"],
+      long_description_content_type='text/x-rst',
+      author='Pierre de Buyl',
+      author_email='pdebuyl@pdebuyl.be',
+      license='BSD',
+      url='https://pypi.python.org/pypi/tidynamics',
+      packages=['tidynamics'],
       install_requires=['numpy'],
       classifiers=[
           'License :: OSI Approved :: BSD License',
