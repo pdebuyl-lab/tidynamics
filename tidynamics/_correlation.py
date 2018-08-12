@@ -39,7 +39,7 @@ def msd(pos):
 
     """
 
-    pos = np.array(pos, copy=True, dtype=float)
+    pos = np.asarray(pos)
     if pos.ndim==1:
         pos = pos.reshape((-1,1))
     N = len(pos)
@@ -72,7 +72,7 @@ def cross_displacement(x):
 
     """
 
-    x = np.array(x)
+    x = np.asarray(x)
     if x.ndim != 2:
         raise ValueError("Incorrect input data for cross_displacement")
     D = x.shape[1]
