@@ -60,25 +60,25 @@ def msd(pos):
 
     return MSD
 
-def cross_displacement(x):
-    """Cross displacement of the components of x.
+def cross_displacement(pos):
+    """Cross displacement of the components of pos.
 
     Args:
-        x (array-like): The input trajectory, of shape (N, D).
+        pos (array-like): The input trajectory, of shape (N, D).
 
     Returns:
         : list of lists of times series, where the fist two indices [i][j]
-        denote the coordinates for the cross displacement: "(Delta x[:,i]) (Delta x[:,j])".
+        denote the coordinates for the cross displacement: "(Delta pos[:,i]) (Delta pos[:,j])".
 
     """
 
-    x = np.asarray(x)
-    if x.ndim != 2:
+    pos = np.asarray(pos)
+    if pos.ndim != 2:
         raise ValueError("Incorrect input data for cross_displacement")
-    D = x.shape[1]
+    D = pos.shape[1]
 
     # Precompute the component-wise MSD
-    split_msd = [msd(xi) for xi in x.T]
+    split_msd = [msd(pos_i) for pos_i in pos.T]
 
     # Create list of lists for the output
     result = [[] for i in range(D)]
@@ -89,8 +89,8 @@ def cross_displacement(x):
         if i==j:
             result[i][j] = split_msd[i]
         else:
-            sum_of_x = msd(x[:,i]+x[:,j])
-            result[i][j] = 0.5*(sum_of_x - split_msd[i] - split_msd[j])
+            sum_of_pos = msd(pos[:,i]+pos[:,j])
+            result[i][j] = 0.5*(sum_of_pos - split_msd[i] - split_msd[j])
 
     return result
 
