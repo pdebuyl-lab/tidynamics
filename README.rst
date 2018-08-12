@@ -53,6 +53,7 @@ Contact, support, and contribution information
 To contact the author about tidynamics, you can either write an email to `Pierre de Buyl
 <https://www.kuleuven.be/wieiswie/nl/person/00092351>`_ or use the `issue tracker
 <https://github.com/pdebuyl-lab/tidynamics/issues>`_ of the GitHub project.
+Existing contributors are listed in the file [CONTRIBUTORS](CONTRIBUTORS).
 
 Bug reports are welcome. If you consider proposing a feature, please keep in mind the goals
 and plans exposed above.
