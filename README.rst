@@ -51,6 +51,9 @@ We use `pytest <https://pypi.python.org/pypi/pytest/>`_ for testing::
 
     python -m pytest
 
+Installing tidynamics does not install the tests. It is necessary to download tidynamics'
+source and to install pytest to run the tests.
+
 Contact, support, and contribution information
 ----------------------------------------------
 
