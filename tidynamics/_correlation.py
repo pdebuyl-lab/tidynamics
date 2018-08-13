@@ -31,7 +31,7 @@ def msd(pos):
     Correlation Algorithm.
 
     Args:
-        pos (array-like): The input trajectory, of shape (N,D).
+        pos (array-like): The input trajectory, of shape (N,) or (N,D).
 
     Returns:
         : ndarray of shape (N,) with the MSD for successive linearly spaced time
