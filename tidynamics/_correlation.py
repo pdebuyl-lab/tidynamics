@@ -4,7 +4,8 @@ from .core import autocorrelation_1d, correlation_1d
 import itertools
 
 def acf(data):
-    """Autocorrelation of the input data using the Fast Correlation Algorithm.
+    """Autocorrelation function (ACF) of the input data using the Fast
+    Correlation Algorithm.
 
     For D-dimensional time series, a sum is performed on the last dimension.
 
@@ -27,7 +28,7 @@ def acf(data):
         return result
 
 def msd(pos):
-    """Mean-squared displacement (MSD) for single trajectories using the Fast
+    """Mean-squared displacement (MSD) of the input trajectory using the Fast
     Correlation Algorithm.
 
     Args:
@@ -61,7 +62,7 @@ def msd(pos):
     return MSD
 
 def cross_displacement(pos):
-    """Cross displacement of the components of pos.
+    """Cross displacement of the components of the input trajectory.
 
     Args:
         pos (array-like): The input trajectory, of shape (N, D).
@@ -95,7 +96,7 @@ def cross_displacement(pos):
     return result
 
 def correlation(data1, data2):
-    """Correlation of the input data using the Fast Correlation Algorithm.
+    """Correlation between the input data using the Fast Correlation Algorithm.
 
     For D-dimensional time series, a sum is performed on the last dimension.
 

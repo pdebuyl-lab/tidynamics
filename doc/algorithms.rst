@@ -20,27 +20,48 @@ notebook.
 Correlations
 ------------
 
+The correlation :math:`C_{AB}(\tau)` is
+
+.. math::
+   C_{AB}(\tau) = \langle A(0) B(\tau) \rangle
+
+where the angle brackets denote an average over time.
+
 For correlations, the FCA relies on a slight modification of the `Convolution theorem
 <https://en.wikipedia.org/wiki/Convolution_theorem>`_ in which one convolves a time series
 with its time-reversed counterpart.
 
 One important point of attention in the algorithm consists in padding the data with zero
-values, as else the result with contain the correlation of the signal with its periodic
+values, as else the result contains the correlation of the signal with its periodic
 image.
 
 Mean-Square Displacements
 -------------------------
 
-The computation of the MSD relies on decomposing the average
+The mean-square displacement :math:`MSD(\tau)` is
 
 .. math::
-   \langle ( x(t) - x(0) )^2 \rangle
+   MSD(\tau) = \langle (x(\tau) - x(0) )^2 \rangle
 
-into an average term and an explicit correlator:
+where the angle brackets denote an average over time.
+
+The computation of the MSD relies on decomposing the average into an average term and an
+explicit correlator:
 
 .. math::
-   \langle x(t)^2 + x(0)^2 \rangle - 2\langle x(t) x(0) \rangle
+   \langle x(\tau)^2 + x(0)^2 \rangle - 2\langle x(\tau) x(0) \rangle
 
 The correlator is computed with the convolution theorem and the other operations have linear
 complexity. The finite length of the time series is also taken into account in the
 algorithm.
+
+Cross displacements
+-------------------
+
+The cross displacement :cite:`kraft_complex_shape_2013` :math:`C_{ij}(\tau)` is
+
+.. math::
+   C_{ij}(\tau) = \langle (x_i(\tau) - x_i(0)) (x_j(\tau) - x_j(0)) \rangle
+
+As for the mean-square displacement, the interest of using tidynamics lies in the fast
+computation of the correlation part.
