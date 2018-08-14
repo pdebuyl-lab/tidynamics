@@ -1,6 +1,17 @@
 tidynamics
 ==========
 
+.. image:: http://joss.theoj.org/papers/c4784e48e7514c207d95f440c2a07874/status.svg
+   :target: http://joss.theoj.org/papers/c4784e48e7514c207d95f440c2a07874
+   :alt: JOSS review page
+
+.. image:: https://travis-ci.org/pdebuyl-lab/tidynamics.svg?branch=master
+   :target: https://travis-ci.org/pdebuyl-lab/tidynamics
+   :alt: Test status
+
+.. image:: https://anaconda.org/conda-forge/tidynamics/badges/version.svg
+   :target: https://anaconda.org/conda-forge/tidynamics
+   :alt: Link to conda-forge page
 
 A tiny package to compute the dynamics of stochastic and molecular simulations.
 
