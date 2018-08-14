@@ -1,3 +1,5 @@
-
 from ._correlation import acf, msd, cross_displacement, correlation
-from .version import __version__ as __version__
+import os.path
+
+with open(os.path.join(os.path.dirname(__file__), 'VERSION')) as f:
+    __version__ = f.read().strip()

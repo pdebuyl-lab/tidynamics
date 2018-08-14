@@ -1,14 +1,11 @@
 from setuptools import setup
+import os.path
 
-VERSION = '0.1.2.dev5'
+with open(os.path.join('tidynamics', 'VERSION')) as f:
+    VERSION = f.read().strip()
 
 with open('README.rst', 'r') as f:
     readme = f.read()
-
-with open('tidynamics/version.py', 'w') as version_f:
-    version_f.write(
-        "__version__ = '{__version__}'".format(__version__=VERSION)
-    )
 
 setup(name='tidynamics',
       version=VERSION,
@@ -21,6 +18,7 @@ setup(name='tidynamics',
       url='https://pypi.org/project/tidynamics/',
       packages=['tidynamics'],
       install_requires=['numpy'],
+      package_data={'tidynamics': ['VERSION']},
       classifiers=[
           'License :: OSI Approved :: BSD License',
           'Programming Language :: Python :: 2.7',
