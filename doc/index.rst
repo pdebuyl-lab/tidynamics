@@ -20,6 +20,10 @@ tidynamics
       :target: https://anaconda.org/conda-forge/tidynamics
       :alt: Link to conda-forge page
 
+   .. image:: https://mybinder.org/badge.svg
+      :target: https://mybinder.org/v2/gh/pdebuyl-lab/tidynamics/master?filepath=doc%2Findex.ipynb
+      :alt: Link to binder example notebook
+
 
 .. only:: latex
 

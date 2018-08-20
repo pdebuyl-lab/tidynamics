@@ -14,7 +14,7 @@ tidynamics
    :alt: Link to conda-forge page
 
 .. image:: https://mybinder.org/badge.svg
-   :target: https://mybinder.org/v2/gh/pdebuyl-lab/tidynamics/binder_notebook?filepath=doc%2Findex.ipynb
+   :target: https://mybinder.org/v2/gh/pdebuyl-lab/tidynamics/master?filepath=doc%2Findex.ipynb
    :alt: Link to binder example notebook
 
 A tiny package to compute the dynamics of stochastic and molecular simulations.
