@@ -36,6 +36,7 @@ A tiny package to compute the dynamics of stochastic and molecular simulations.
 :License: BSD 3-clause
 :Author: Pierre de Buyl
 :Website: http://lab.pdebuyl.be/tidynamics/
+:Version: |release|
 
 tidynamics
 
