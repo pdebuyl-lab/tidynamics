@@ -4,8 +4,11 @@ from .core import autocorrelation_1d, correlation_1d
 import itertools
 
 def acf(data):
-    """Autocorrelation function (ACF) of the input data using the Fast
-    Correlation Algorithm.
+    """Autocorrelation of the input data using the Fast Correlation Algorithm.
+
+    Computes the autocorrelation for all time lags in the input data. The numerical results for
+    large lags contain fewer samples than for short lags and are not accurate. This is intrinsic to
+    the computation and not a limitation of the algorithm.
 
     For D-dimensional time series, a sum is performed on the last dimension.
 
@@ -30,6 +33,10 @@ def acf(data):
 def msd(pos):
     """Mean-squared displacement (MSD) of the input trajectory using the Fast
     Correlation Algorithm.
+
+    Computes the MSD for all possible time deltas in the trajectory. The numerical results for large
+    time deltas contain fewer samples than for small time times and are less accurate. This is
+    intrinsic to the computation and not a limitation of the algorithm.
 
     Args:
         pos (array-like): The input trajectory, of shape (N,) or (N,D).
