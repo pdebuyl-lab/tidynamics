@@ -1,9 +1,9 @@
 tidynamics
 ==========
 
-.. image:: http://joss.theoj.org/papers/c4784e48e7514c207d95f440c2a07874/status.svg
-   :target: http://joss.theoj.org/papers/c4784e48e7514c207d95f440c2a07874
-   :alt: JOSS review page
+.. image:: http://joss.theoj.org/papers/10.21105/joss.00877/status.svg
+   :target: https://doi.org/10.21105/joss.00877
+   :alt: DOI link to JOSS article
 
 .. image:: https://travis-ci.org/pdebuyl-lab/tidynamics.svg?branch=master
    :target: https://travis-ci.org/pdebuyl-lab/tidynamics
@@ -58,6 +58,17 @@ It is also possible to download the source code and execute the setup.py file.
 
 I ran the tests with Python 2.7, 3.5 and 3.6 and NumPy 1.11 and 1.13. If you encounter any
 issue, let me know (see Contact below).
+
+
+Citation
+--------
+
+When using tidynamics in a publication, please cite the following paper:
+
+Pierre de Buyl (2018), *tidynamics: A tiny package to compute the dynamics of
+stochastic and molecular simulations*, The Journal of Open Source
+Software https://doi.org/10.21105/joss.00877
+
 
 Testing
 -------

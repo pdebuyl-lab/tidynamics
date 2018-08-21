@@ -1,0 +1,24 @@
+When using tidynamics in a publication, please cite the following paper:
+
+Pierre de Buyl (2018), *tidynamics: A tiny package to compute the dynamics of
+stochastic and molecular simulations*, The Journal of Open Source
+Software https://doi.org/10.21105/joss.00877
+
+.. image:: http://joss.theoj.org/papers/10.21105/joss.00877/status.svg
+   :target: https://doi.org/10.21105/joss.00877
+   :alt: DOI link to JOSS article
+
+~~~
+@article{tidynamics_2018,
+  doi = {10.21105/joss.00877}
+  year  = {2018},
+  publisher = {Open Journals},
+  volume = {3},
+  number = {28},
+  pages = {877},
+  author = {Pierre de Buyl},
+  title = {{tidynamics: A tiny package to compute the dynamics of stochastic and molecular simulations}},
+  title = {unyt: Handle,  manipulate,  and convert data with units in Python},
+  journal = {The Journal of Open Source Software},
+}
+~~~

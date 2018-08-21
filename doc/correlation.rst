@@ -1,14 +1,10 @@
 Correlation routines
 ====================
 
-.. automodule:: tidynamics
-   :members:
-   :noindex:
+.. autofunction:: tidynamics.acf
 
-.. autofunction:: acf
+.. autofunction:: tidynamics.msd
 
-.. autofunction:: msd
+.. autofunction:: tidynamics.cross_displacement
 
-.. autofunction:: cross_displacement
-
-.. autofunction:: correlation
+.. autofunction:: tidynamics.correlation
