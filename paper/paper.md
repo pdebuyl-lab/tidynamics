@@ -17,12 +17,15 @@ bibliography: paper.bib
 
 # Summary
 
-tidynamics provides an efficient implementation of the Fast Correlation Algorithm to compute
-correlation functions of interest in molecular [@allen_tildesley_1987;@nmoldyn_1995] and
-stochastic [@gardiner_2004] dynamics.
-The autocorrelation, the correlation between two time-series, the mean-square displacement,
-and the cross-displacement (for off-diagonal realisations of Brownian motion), allow the
-quantitative measure of relaxation and transport coefficients from numerical trajectories.
+tidynamics provides an efficient implementation of the Fast Correlation Algorithm (FCA) to
+compute correlation functions of interest in molecular [@allen_tildesley_1987;@nmoldyn_1995]
+and stochastic [@gardiner_2004] dynamics.
+Building on the FCA, tidynamics computes the autocorrelation (the correlation of a time
+series with itself), the correlation between two time-series, the mean-square displacement
+of a trajectory, and the cross-displacement (for off-diagonal realisations of Brownian
+motion).
+These correlation functions serve for the quantitative measure of relaxation and transport
+coefficients from numerical trajectories.
 
 There is a lack of a self-contained implementation of the algorithm. The software nMoldyn
 [@hinsen_nmoldyn3_2012] implements it within a larger library but it has a more complex
@@ -31,18 +34,18 @@ implementation with a lighter interface.
 
 tidynamics is designed as a library in which every routine operates directly on NumPy arrays
 and returns NumPy arrays. The interface is simple and enables convenient use in interactive
-sessions or in teaching material. We test the library against Python 2.7, 3.5 and 3.6 and
+sessions or in teaching material. We test the library against Python 2.7, 3.5, and 3.6 and
 several versions of NumPy to guard against a possible sensitivity to the API.
 
 The Fast Correlation Algorithm relies on the Fourier transform to compute correlations. For
-this purpose, we use NumPy's [@travis_numpy_2006] FFT module `np.fft`.
+this purpose, we use NumPy's [@oliphant_cise_2007] FFT module `np.fft`.
 The advantage of using Fourier transforms is a reduced computational cost in comparison to a
 direct loop over the data. We expect a scaling of the CPU time $t_\mathrm{CPU}$ of
-$t_\mathrm{CPU} \propto N \log N$ where $N$ is the length of the time series. We show the
-actual CPU time and compare it favourably to the expected scaling in the example *Scaling
-behaviour*.
+$t_\mathrm{CPU} \propto N \log N$ where $N$ is the length of the time series. We show in
+Figure 3 the actual CPU time and compare it favourably to the expected scaling in the
+example *Scaling behaviour*.
 
-NumPy [@travis_numpy_2006] and SciPy [@scipy-web] implement correlation routines as well. In
+NumPy [@oliphant_cise_2007] and SciPy [@scipy-web] implement correlation routines as well. In
 the case of NumPy, the computation is based on a direct loop with a quadratic scaling of the
 CPU time $O(N^2)$. In SciPy, both the direct and a Fourier transform version are
 implemented.
@@ -54,16 +57,17 @@ zero-padding the signal, and they do not normalise the result by the actual numb
 samples. In addition to these differences, the relative complexity of building SciPy and its
 larger size motivated us to rely on NumPy only.  NumPy and SciPy do not provide functions to
 compute the mean-square displacement of trajectories. The Fast Correlation Algorithm as
-applied to mean-square displacements was proposed in [@nmoldyn_1995] and is less known than
+applied to mean-square displacements was proposed by @nmoldyn_1995 and is less known than
 the plain correlation algorithm.
 
 The benefits of using tidynamics originate in the implementation of the suitable definitions
-for the study of dynamical systems, in a good performance, and in its ease of installation.
+for the study of dynamical systems, good performance, and its ease of installation.
 
 # Examples
 
-We show in figures 1, 2, and 3 the examples provided with tidynamics. The examples in the
-repository include short codes for a random walk and for the Ornstein-Uhlenbeck process.
+We show in Figures 1, 2, and 3 the examples provided with tidynamics. The examples in the
+repository include short codes for a random walk, for the Ornstein-Uhlenbeck process, and
+for the scaling performance analysis of the autocorrelation routine.
 
 ![Mean-square displacement for a random walk and for a trajectory at constant velocity.](msd_example.pdf)
 
