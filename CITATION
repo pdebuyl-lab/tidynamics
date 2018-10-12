@@ -18,7 +18,6 @@ Software https://doi.org/10.21105/joss.00877
   pages = {877},
   author = {Pierre de Buyl},
   title = {{tidynamics: A tiny package to compute the dynamics of stochastic and molecular simulations}},
-  title = {unyt: Handle,  manipulate,  and convert data with units in Python},
-  journal = {The Journal of Open Source Software},
+  journal = {Journal of Open Source Software},
 }
 ~~~
