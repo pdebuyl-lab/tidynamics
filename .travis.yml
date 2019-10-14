@@ -4,11 +4,14 @@ python:
  - 2.7
  - 3.5
  - 3.6
+ - 3.7
 
 env:
   - NUMPY_VERSION=1.11.0
   - NUMPY_VERSION=1.12.1
-  - NUMPY_VERSION=1.14.0
+  - NUMPY_VERSION=1.14.6
+  - NUMPY_VERSION=1.15.4
+  - NUMPY_VERSION=1.16.5
 
 matrix:
   exclude:
