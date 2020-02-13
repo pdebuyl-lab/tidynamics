@@ -23,7 +23,6 @@ def test_random_walk_msd():
 
     N = 200
     N_dim = 2
-    time = np.arange(N)
     # Generate steps of value +/- 1
     steps = -1 + 2*np.random.randint(0, 2, size=(N, N_dim))
     # Compute random walk position
