@@ -48,6 +48,8 @@ def msd(pos):
     """
 
     pos = np.asarray(pos)
+    if pos.shape[0] == 0:
+        return np.array([], dtype=pos.dtype)
     if pos.ndim==1:
         pos = pos.reshape((-1,1))
     N = len(pos)
