@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tidynamics"
+authors = [
+    {name = "Pierre de Buyl", email = "pdebuyl@pdebuyl.be"},
+]
+description = "Tiny package to compute dynamics correlations"
+readme = "README.rst"
+requires-python = ">=3.7"
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    'License :: OSI Approved :: BSD License',
+    'Programming Language :: Python :: 3',
+]
+dependencies = [
+    "numpy",
+]
+dynamic = ["version"]
+
+[tool.setuptools]
+packages = ["tidynamics"]
+
+[tool.setuptools.dynamic]
+version = {file = "tidynamics/VERSION"}
