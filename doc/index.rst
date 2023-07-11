@@ -24,8 +24,8 @@ tidynamics
       :target: https://mybinder.org/v2/gh/pdebuyl-lab/tidynamics/master?filepath=doc%2Findex.ipynb
       :alt: Link to binder example notebook
 
-   .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1404296.svg
-      :target: https://doi.org/10.5281/zenodo.1404296
+   .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1401184.svg
+      :target: https://doi.org/10.5281/zenodo.1401184
       :alt: Link Zenodo archive
 
 
