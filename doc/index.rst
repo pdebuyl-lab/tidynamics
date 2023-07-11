@@ -12,8 +12,8 @@ tidynamics
       :target: https://doi.org/10.21105/joss.00877
       :alt: DOI link to JOSS article
 
-   .. image:: https://travis-ci.org/pdebuyl-lab/tidynamics.svg?branch=master
-      :target: https://travis-ci.org/pdebuyl-lab/tidynamics
+   .. image:: https://github.com/pdebuyl-lab/tidynamics/actions/workflows/test.yml/badge.svg
+      :target: https://github.com/pdebuyl-lab/tidynamics/actions/workflows/test.yml
       :alt: Test status
 
    .. image:: https://anaconda.org/conda-forge/tidynamics/badges/version.svg
@@ -44,7 +44,7 @@ tidynamics
 - accepts as input NumPy arrays storing the positions and velocities of particles.
 - implements the so-called Fast Correlation Algorithm proposed by Kneller and others
   :cite:`nmoldyn_1995` for the `nMOLDYN
-  <http://dirac.cnrs-orleans.fr/plone/software/nmoldyn/>`_ analysis program.
+  <http://dirac.cnrs-orleans.fr/nMOLDYN.html>`_ analysis program.
 - depends only `Python <https://www.python.org/>`_ and `NumPy <http://www.numpy.org/>`_.
 
 For a quick jump into tidynamics, have a look at the examples.
@@ -70,10 +70,10 @@ or with conda (via conda-forge)::
 
     conda install -c conda-forge tidynamics
 
-It is also possible to download the source code and execute the setup.py file.
+It is also possible to download the source code and execute pip locally file.
 
-I ran the tests with Python 2.7, 3.5 and 3.6 and NumPy 1.11 and 1.13. If you encounter any
-issue, let me know (see :ref:`Contact` below).
+Tests are run with Python 3.7 to 3.11. Python 2 is not supported anymore.  If
+you encounter any issue, let me know (see :ref:`Contact` below).
 
 
 Citation
