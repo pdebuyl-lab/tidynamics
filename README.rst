@@ -17,6 +17,10 @@ tidynamics
    :target: https://mybinder.org/v2/gh/pdebuyl-lab/tidynamics/master?filepath=doc%2Findex.ipynb
    :alt: Link to binder example notebook
 
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1404296.svg
+   :target: https://doi.org/10.5281/zenodo.1404296
+   :alt: Link Zenodo archive
+
 A tiny package to compute the dynamics of stochastic and molecular simulations.
 
 :License: BSD 3-clause
