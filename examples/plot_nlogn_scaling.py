@@ -8,7 +8,6 @@ Compute the autocorrelation for varying time series lengths.
 The figure displays the timing and a :math:`N log N` scaling law, demonstrating
 the claimed complexity.
 """
-from __future__ import division
 
 import numpy as np
 import tidynamics

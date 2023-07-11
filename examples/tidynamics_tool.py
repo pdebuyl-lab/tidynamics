@@ -17,7 +17,6 @@ For more information, consult the documentation of tidynamics at
 http://lab.pdebuyl.be/tidynamics/
 
 """
-from __future__ import print_function, division
 
 import argparse
 import numpy as np
