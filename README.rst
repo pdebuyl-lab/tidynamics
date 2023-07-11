@@ -54,7 +54,7 @@ or with conda (via conda-forge)::
 
     conda install -c conda-forge tidynamics
 
-It is also possible to download the source code and execute pip locally file.
+It is also possible to download the source code and execute pip locally.
  
 Tests are run with Python 3.7 to 3.11. Python 2 is not supported anymore.  If
 you encounter any issue, let me know (see Contact below).
