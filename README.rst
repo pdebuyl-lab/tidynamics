@@ -5,8 +5,8 @@ tidynamics
    :target: https://doi.org/10.21105/joss.00877
    :alt: DOI link to JOSS article
 
-.. image:: https://travis-ci.org/pdebuyl-lab/tidynamics.svg?branch=master
-   :target: https://travis-ci.org/pdebuyl-lab/tidynamics
+.. image:: https://github.com/pdebuyl-lab/tidynamics/actions/workflows/test.yml/badge.svg
+   :target: https://github.com/pdebuyl-lab/tidynamics/actions/workflows/test.yml
    :alt: Test status
 
 .. image:: https://anaconda.org/conda-forge/tidynamics/badges/version.svg
