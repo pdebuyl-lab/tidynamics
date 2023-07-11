@@ -54,11 +54,10 @@ or with conda (via conda-forge)::
 
     conda install -c conda-forge tidynamics
 
-It is also possible to download the source code and execute the setup.py file.
-
-I ran the tests with Python 2.7, 3.5 and 3.6 and NumPy 1.11 and 1.13. If you encounter any
-issue, let me know (see Contact below).
-
+It is also possible to download the source code and execute pip locally file.
+ 
+Tests are run with Python 3.7 to 3.11. Python 2 is not supported anymore.  If
+you encounter any issue, let me know (see Contact below).
 
 Citation
 --------
