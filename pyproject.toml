@@ -20,6 +20,9 @@ dependencies = [
 ]
 dynamic = ["version"]
 
+[project.optional-dependencies]
+test = ["pytest"]
+
 [tool.setuptools]
 packages = ["tidynamics"]
 
